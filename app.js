@@ -167,7 +167,7 @@ function validate(){
     const password = document.getElementById("password").value
     if(password=="123" && username=="user"){
         // window.location.replace("http://www.w3schools.com");
-        window.location.href = "file:///login.html"
+        window.location.href = "login.html"
 
         alert("Now you can attemend Quiz")
         return false
