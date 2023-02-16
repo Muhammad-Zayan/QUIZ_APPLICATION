@@ -168,11 +168,11 @@ function validate(){
     if(password=="123" && username=="user"){
         // window.location.replace("http://www.w3schools.com");
         window.location.href = "login.html"
-
         alert("Now you can attemend Quiz")
+       
         return false
     }else{
-        alert("Login Falied")
+        alert("Login Falied the (This page isn’t working)page will be open PLease use correct password to login")
     }
 
 }
@@ -194,14 +194,15 @@ submit.addEventListener('click', () => {
     deselectAll()
 
     if (questionCount < quizDB.length) {
+        window.location.href="index.html"
         loadQuestion()
     } else {
         showScore.innerHTML = `
         <h3>Your Score ${score}/${quizDB.length} </h3>
         <h3>Your Percentage is ${Math.round(score/quizDB.length*100)}%</h3>
         <button class="btn" onclick="location.reload()">DO AGAIN</button>
-        window.location.href= "index.html"
         `
+       
         
         showScore.classList.remove('scorearea')
     }
@@ -210,4 +211,5 @@ submit.addEventListener('click', () => {
 
 
 })
+
 
