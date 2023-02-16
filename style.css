@@ -8,6 +8,8 @@
 
 html{
     font-size: 63.5%;
+    background-color: hsl(206, 92%, 94%);
+
 }
 .main-div{
     width: 100vw;
@@ -131,6 +133,54 @@ input{
 #submit:hover{
     background-color: #0834e3;
 }
+}
+.box{
+    width: 400px;
+    padding: 1.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: rgba(0, 0, 0, 0.5 );
+    text-align: center;
+}
+.box h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"]{
+border: 0;
+background: none;
+display: block;
+margin: 1.3rem auto;
+text-align: center;
+border: 3px solid #0367fd;
+padding: 1.1rem 0.5rem;
+width: 320px;
+outline: none;
+color: #fff;
+border-radius: 24px;
+transition: 0.35px;
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+width: 340px;
+border-color: #ffc400ec;
+}
+.box input[type="submit"]{
+    border: 0;
+background: none;
+display: block;
+margin: 1.3rem auto;
+text-align: center;
+border: 3px solid #ffc400ec;
+padding: 1.1rem 0.5rem;
+outline: none;
+color: #fff;
+border-radius: 25px;
+transition: 0.35px;
+cursor: pointer;
 }
 
 
