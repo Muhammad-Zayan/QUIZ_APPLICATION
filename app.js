@@ -110,12 +110,13 @@ const quizDB = [
     }
 ];
 
+
 const question = document.querySelector('.question')
 const option1 = document.querySelector('#option1')
 const option2 = document.querySelector('#option2')
 const option3 = document.querySelector('#option3')
 const submit = document.querySelector('#submit')
-
+const btn = document.querySelector('.btn')
 const showScore = document.querySelector('#showScore')
 
 //if we ant to use mulitple class in one query then we use queryselectorAll
@@ -162,6 +163,25 @@ const deselectAll = () => {
 
 
 
+function validate(){
+    const username = document.getElementById("username").value
+    const password = document.getElementById("password").value
+    if(password=="123" && username=="user"){
+        // window.location.replace("http://www.w3schools.com");
+        window.location.href = "/index.html"
+
+        alert("Now you can attemend Quiz")
+        return false
+    }else{
+        alert("Login Falied")
+    }
+
+}
+
+
+
+
+
 submit.addEventListener('click', () => {
     const checkanswer = getCheckAnswer()
     console.log(checkanswer)
@@ -179,9 +199,18 @@ submit.addEventListener('click', () => {
     } else {
         showScore.innerHTML = `
         <h3>Your Score ${score}/${quizDB.length} </h3>
-        <button class="btn" onclick="location.reload()">DO AGAIN</button>
+        <h3>Your Percentage is ${Math.round(score/quizDB.length*100)}%</h3>
+        <button class="btn" onclick="location.reload('login.html')">DO AGAIN</button>
         `
+        // btn.addEventListener('click',() =>{
+        //     window.location.href ="login.html"
+        //     return false
+        // })
         showScore.classList.remove('scorearea')
     }
 
+    
+
+
 })
+
