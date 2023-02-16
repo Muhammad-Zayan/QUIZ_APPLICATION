@@ -110,7 +110,6 @@ const quizDB = [
     }
 ];
 
-
 const question = document.querySelector('.question')
 const option1 = document.querySelector('#option1')
 const option2 = document.querySelector('#option2')
@@ -168,7 +167,7 @@ function validate(){
     const password = document.getElementById("password").value
     if(password=="123" && username=="user"){
         // window.location.replace("http://www.w3schools.com");
-        window.location.href = "/index.html"
+        window.location.href = "file:///login.html"
 
         alert("Now you can attemend Quiz")
         return false
@@ -200,12 +199,10 @@ submit.addEventListener('click', () => {
         showScore.innerHTML = `
         <h3>Your Score ${score}/${quizDB.length} </h3>
         <h3>Your Percentage is ${Math.round(score/quizDB.length*100)}%</h3>
-        <button class="btn" onclick="location.reload('login.html')">DO AGAIN</button>
+        <button class="btn" onclick="location.reload()">DO AGAIN</button>
+        window.location.href= "index.html"
         `
-        // btn.addEventListener('click',() =>{
-        //     window.location.href ="login.html"
-        //     return false
-        // })
+        
         showScore.classList.remove('scorearea')
     }
 
